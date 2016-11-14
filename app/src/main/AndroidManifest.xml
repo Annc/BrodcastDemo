@@ -17,6 +17,7 @@
         </activity>
         <receiver android:name=".MyReciver">
             <intent-filter>
+                <!--飞行模式 静态注册-->
                 <action android:name="android.intent.action.AIRPLANE_MODE"/>
             </intent-filter>
         </receiver>
