@@ -14,18 +14,16 @@ public class MainActivity extends AppCompatActivity {
         /**
          * 动态注册广播,需要注销
          */
-        /*
         IntentFilter filter = new IntentFilter();
-        filter.addAction("android.intent.action.AIRPLANE_MODE");
+        filter.addAction("android.provider.Telephony.SMS.RECEIVED");
         registerReceiver(reciver, filter);
-        */
 
     }
     @Override
     protected void onDestroy() {
         super.onDestroy();
         //销毁广播
-        //unregisterReceiver(reciver);
+        unregisterReceiver(reciver);
     }
 
 
