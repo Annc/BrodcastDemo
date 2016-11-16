@@ -17,6 +17,7 @@ public class MyReciver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         Log.v("here","Broadcast onReceive");
+        /*
         //取出intent数据
         Bundle bundle = intent.getExtras();
         //得到短信实体，一个SmsMessage对象可以保存140字节，号码在第0个
@@ -38,5 +39,7 @@ public class MyReciver extends BroadcastReceiver {
         }
         //电话号码
        Log.v("here", "电话号码" + messages[0].getDisplayOriginatingAddress());
+       */
     }
+
 }
