@@ -31,7 +31,11 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setAction("com.example.dou.brodcastdemo.MY_ACTION");
                 //sendBroadcast(intent);
-                sendBroadcast(intent, "com.example.dou.brodcastdemo.MYPEMISSION");
+                //使用sendBroadcast发送的是无序广播
+                //sendBroadcast(intent, "com.example.dou.brodcastdemo.MYPEMISSION");
+                intent.putExtra("hello","world");
+                //发送有序广播
+                sendOrderedBroadcast(intent, null);
             }
         });
 

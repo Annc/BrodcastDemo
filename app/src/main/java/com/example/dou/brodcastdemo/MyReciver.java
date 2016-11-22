@@ -11,6 +11,8 @@ import android.util.Log;
 
 /**
  * Created by Dou on 2016/11/14.
+ * 有序广播默认情况下，谁先注册，谁先接收
+ * 广播接受到的源头都是一样的
  */
 
 public class MyReciver extends BroadcastReceiver {
@@ -19,7 +21,10 @@ public class MyReciver extends BroadcastReceiver {
      */
     @Override
     public void onReceive(Context context, Intent intent) {
-        Log.v("here","Broadcast onReceive");
+        Log.v("here","First Broadcast onReceive");
+        setResultData("1234567");
+        //忽略广播,排在后面的就接收不到了
+        //abortBroadcast();
         /*
         //取出intent数据
         Bundle bundle = intent.getExtras();

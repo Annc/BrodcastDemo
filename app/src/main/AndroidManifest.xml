@@ -23,6 +23,17 @@
                 <action android:name="com.example.dou.brodcastdemo.MY_ACTION"/>
             </intent-filter>
         </receiver>
+        <receiver android:name=".MyReciver02">
+            <!--设置广播接收器优先级，数字越大，优先级越高，范围正负1000，不写就是0-->
+            <intent-filter android:priority="100">
+                <action android:name="com.example.dou.brodcastdemo.MY_ACTION"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".MyReciver03">
+            <intent-filter>
+                <action android:name="com.example.dou.brodcastdemo.MY_ACTION"/>
+            </intent-filter>
+        </receiver>
     </application>
     <uses-permission android:name="android.permission.RECEIVE_SMS"/>
     <uses-permission android:name="com.example.dou.brodcastdemo.MYPEMISSION"/>
