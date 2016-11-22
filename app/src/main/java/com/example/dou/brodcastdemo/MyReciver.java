@@ -14,6 +14,9 @@ import android.util.Log;
  */
 
 public class MyReciver extends BroadcastReceiver {
+    /**
+     *OnReceive方法中不能执行异步操作和耗时操作
+     */
     @Override
     public void onReceive(Context context, Intent intent) {
         Log.v("here","Broadcast onReceive");
